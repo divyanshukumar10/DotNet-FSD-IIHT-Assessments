@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace circlefor
+namespace ConsoleApp1
 {
-    class program
+    abstract class shape
     {
-        static void Main(string[] args)
-        {
-
-        }
+        public abstract override string ToString();
     }
 }

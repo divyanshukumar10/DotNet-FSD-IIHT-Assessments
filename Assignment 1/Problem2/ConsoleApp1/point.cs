@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace circlefor
+namespace ConsoleApp1
 {
-    class program
+    class point : shape
     {
-        static void Main(string[] args)
+        private int u;
+        private int v;
+
+        public point (int u,v)
         {
 
         }
+
+        public int U
     }
 }
