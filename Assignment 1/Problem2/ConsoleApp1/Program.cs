@@ -1,16 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace circlefor
+﻿public class TestCylinder
 {
-    class program
+    public static void main(String[] args)
     {
-        static void Main(string[] args)
-        {
-
-        }
+        Cylinder cy1 = new Cylinder();
+        
+        Console.WriteLine("Radius is " + cy1.getRadius()
+           + ", Height is " + cy1.getHeight()
+           + ", Color is " + cy1.getColor()
+           + ", Base area is " + cy1.getArea()
+           + ", Volume is " + cy1.getVolume());
+   
+        Cylinder cy2 = new Cylinder(5.0, 2.0);
+       
+        Console.WriteLine("Radius is " + cy2.getRadius()
+           + ", Height is " + cy2.getHeight()
+           + ", Color is " + cy2.getColor()
+           + ", Base area is " + cy2.getArea()
+           + ", Volume is " + cy2.getVolume());
     }
 }
