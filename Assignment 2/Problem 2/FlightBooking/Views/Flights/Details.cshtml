@@ -1,0 +1,63 @@
+﻿@model FlightBooking.Models.Flight
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Flight</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FlightNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlightNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartingFrom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartingFrom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Destination)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Destination)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bookings)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Last name</th>
+                    <th>First name</th>
+                </tr>
+                @foreach (var item in Model.Bookings)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Customer.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Customer.FirstName)
+                    </td>
+                </tr>
+                }
+            </table>
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FlightID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
